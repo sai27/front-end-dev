@@ -1,0 +1,38 @@
+.tb-shell {
+  display: inline-block;
+  position: relative;
+  background: #000;
+  width: 600px;
+  height: 200px;
+  margin: 5px;
+}
+
+.tb-row {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: fit-content;
+  height:fit-content;
+  background: #f00;
+}
+
+.tb-url {
+  float: left;
+  background: #f0f;
+  text-decoration: none;
+}
+
+.tb-img {
+  display: block;
+  width: 200px;
+}
+
+.tb-span {
+  display: block;
+  text-align: center;
+  background: #3080ff;
+  font-size: 20px;
+}
