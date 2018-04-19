@@ -1,0 +1,44 @@
+html, body {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+}
+
+.outter {
+  height: 500px;
+  width: 500px;
+}
+
+.inner {
+  height: 100%;
+  width: 100%;
+}
+
+.frame-col {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.frame-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.frame-item {
+  background: rgba(128,128,128,0.3);
+  margin: 1px;
+  flex: 1 1 0; /* 要特别注意flex-basis设置为auto与0之间的区别 */
+}
+
+.frame-item:nth-child(3n+1) {
+  background: rgba(128,0,0,1);
+}
+
+.frame-item:nth-child(3n+2) {
+  background: rgba(0,128,0,1);
+}
+
+.frame-item:nth-child(3n+3) {
+  background: rgba(0,0,128,1);
+}
