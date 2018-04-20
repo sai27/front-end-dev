@@ -57,7 +57,7 @@ a {
   list-style: none;
   padding: 0;
   white-space: nowrap;
-  overflow-x: auto;
+  /* overflow-x: auto; */
   flex: 0 1 auto;
   order: 2;
   display: flex;
@@ -96,12 +96,11 @@ a {
 .detail-image-frame {
   text-align: center;
   position: relative;
-
 }
 
 .detail-image {
   width: 90%;
-  display: block;
+
 }
 
 .detail-image-title {
@@ -112,4 +111,24 @@ a {
   position: absolute;
   bottom: -16px;
   left: 4px;
+}
+
+@media all and (min-width: 768px) {
+  .main-content{
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .thumbnail-list {
+    flex-direction: column;
+    order: 0;
+  }
+
+  .thumbnail-item {
+    max-width: 260px;
+  }
+
+  .thumbnail-item + .thumbnail-item {
+    margin-top: 20px;
+  }
 }
