@@ -76,7 +76,6 @@ a {
 
 .thumbnail-item:hover {
   transform: scale(1.2);
-  transition: transform 1000ms ease-in-out;
 }
 
 .thumbnail-image {
