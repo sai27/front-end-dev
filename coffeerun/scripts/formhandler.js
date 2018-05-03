@@ -28,6 +28,30 @@
       })
   }
 
+  FormHandler.prototype.AddCoffeeRangeEffect = function() {
+    var label = $("#strengthLevelLabel");
+    var setStrengthControl = function(value) {
+        label.text("Coffeine Rating: " + value);
+        if (value >= 0 && value <= 50) {
+          var r = Math.ceil(value/50*255);
+          var c = "#"+r.toString(16)+"ff00";
+        }
+        else {
+          var g = 255-Math.ceil((value-50)/50*255);
+          var c = "#ff"+g.toString(16)+"00";
+        }
+        label.css("color",c);
+    }
+
+    $('#strengthLevel').on('input propertychange', function(v) {
+      setStrengthControl($(this).val());
+    })
+    this.$formElement.on('reset', function(){
+      setStrengthControl($("#strengthLevel")[0].defaultValue);
+    })
+    setStrengthControl($("#strengthLevel")[0].defaultValue);
+  }
+
   App.FormHandler = FormHandler;
 
   window.App = App;

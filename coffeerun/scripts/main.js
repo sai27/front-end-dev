@@ -8,4 +8,5 @@
   var myTruck = new Truck('shitTruck', new DataStore());
   var formHandler = new FormHandler(FORM_SELECTOR);
   formHandler.AddSubmitHandler(myTruck.createOrder.bind(myTruck));
+  formHandler.AddCoffeeRangeEffect();
 })(window);
